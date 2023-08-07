@@ -1,0 +1,40 @@
+import sys
+import typing
+from PyQt5 import QtCore
+from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QPushButton, QVBoxLayout, QWidget, QFileDialog
+
+class NoteTakingApp(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Note Taking App")
+        self.setGeometry(100, 100, 800, 600)
+
+        self.init_ui()
+
+    def init_ui(self):
+        # Create a QTextEdit widget for note-taking
+        self.text_edit = QTextEdit(self)
+        self.text_edit.setGeometry(10, 10, 780, 500)
+
+        self.save_button = QPushButton("Save", self)
+        self.save_button.setGeometry(10, 520, 100, 30)
+        self.save_button.clicked.connect(self.save_note)
+
+    def save_note(self):
+        # open file dialog to choose location to save
+        options = QFileDialog.Options()
+        file_path, _= QFileDialog.getSaveFileName(self, "Save Note", "", "Text Files (*.txt);; All Files (*)", options=options)
+        if file_path:
+            # if  a file path is selected, write the contents of th Qtextedit to the file
+            with open(file_path, 'w') as file:
+                file.write(self.text_edit.toPlainText())
+
+    def clear_note(self):
+        # This will clear the contents on the program
+        self.text.edit.clear()
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = NoteTakingApp()
+    window.show()
+    sys.exit(app.exec_())
