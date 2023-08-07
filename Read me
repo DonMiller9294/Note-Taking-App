@@ -1,0 +1,57 @@
+
+# Note Taking App
+
+
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+The Note Taking App is a simple and user-friendly desktop application built using PyQt5 in Python. It allows users to create, edit, and save notes in an intuitive graphical interface. The app provides a convenient way to manage your notes efficiently.
+
+## Features
+- Create new notes with a customizable text editor.
+- Edit existing notes easily using the built-in text editor.
+- Save your notes as text files to your preferred location.
+- Clear the contents of a note to start afresh.
+- Minimalistic and easy-to-use GUI.
+
+## Installation
+1. Clone the repository to your local machine:
+
+   ```
+   git clone https://github.com/your_username/note-taking-app.git
+   ```
+
+2. Install the required dependencies:
+
+   ```
+   pip install PyQt5
+   ```
+
+## Usage
+1. Run the application:
+
+   ```
+   python main.py
+   ```
+
+2. The Note Taking App window will open, providing an interface to create, edit, and save notes.
+
+3. To create a new note, start typing in the text editor area.
+
+4. To save the note, click the "Save" button, and choose the location to save the note as a text file.
+
+
+
+## Contributing
+Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
